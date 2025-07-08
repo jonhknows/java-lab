@@ -19,7 +19,7 @@ public class ThreadsLab {
         thread.join();
         System.out.println("Thread com Runnable finalizada.");
 
-        // Executa a soma sequencial
+        // Executa a soma sequencial (sem Thread)
         SomaSequencial somaSequencial = new SomaSequencial();
         somaSequencial.soma();
         
@@ -35,22 +35,6 @@ public class ThreadsLab {
         SomaForkJoin somaForkJoin = new SomaForkJoin();
         somaForkJoin.soma(args);
 
-    }
-}
-
-
-class SomaSequencial {
-    public void soma() {
-        long inicio = System.currentTimeMillis();
-
-        long soma = 0;
-        for (long i = 1; i <= 2_000_000_000L; i++) {
-            soma += i;
-        }
-
-        long fim = System.currentTimeMillis();
-        System.out.println("Soma: " + soma);
-        System.out.println("Tempo (sequencial): " + (fim - inicio) + " ms");
     }
 }
 
@@ -78,6 +62,26 @@ class ThreadComRunnable implements Runnable {
         System.out.println("Thread principal continua executando...");
     }
 }
+
+/*
+ * Executa uma soma sequencial sem utilizar Threads
+ */
+class SomaSequencial {
+    public void soma() {
+        long inicio = System.currentTimeMillis();
+
+        long soma = 0;
+        for (long i = 1; i <= 2_000_000_000L; i++) {
+            soma += i;
+        }
+
+        long fim = System.currentTimeMillis();
+        System.out.println("Soma: " + soma);
+        System.out.println("Tempo (sequencial): " + (fim - inicio) + " ms");
+    }
+}
+
+
 
 /*
  * Quando você quer customizar diretamente o comportamento da thread
