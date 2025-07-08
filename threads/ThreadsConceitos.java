@@ -6,7 +6,7 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
 import java.util.concurrent.RecursiveTask;
 
-public class ThreadsLab {
+public class ThreadsConceitos {
     public static void main(String[] args) throws Exception {
 //        System.out.println("Hello, World!");
 
