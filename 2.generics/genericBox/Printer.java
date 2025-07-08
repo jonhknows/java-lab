@@ -1,5 +1,3 @@
-package genericBox;
-
 import java.util.List;
 
 // Wildcards (? extends e ? super)

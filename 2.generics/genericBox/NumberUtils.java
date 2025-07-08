@@ -1,5 +1,3 @@
-package genericBox;
-
 // Método genérico com restrição de tipo
 public class NumberUtils {
     

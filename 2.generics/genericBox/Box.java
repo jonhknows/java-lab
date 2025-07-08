@@ -1,4 +1,3 @@
-package genericBox;
 
 // Classe Genérica
 public class Box<T> {
